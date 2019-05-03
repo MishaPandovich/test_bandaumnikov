@@ -1,5 +1,5 @@
-//@import "global/fonts.scss";
-
-body {
-	background: red;
-}
+@import 'global/normalize.scss';
+@import 'global/fonts.scss';
+@import 'global/body.scss';
+@import 'blocks/promo-1.scss';
+@import 'blocks/promo-2.scss';

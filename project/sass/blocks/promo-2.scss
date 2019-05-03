@@ -1,0 +1,74 @@
+.promo-banner--two {
+	position: relative;
+	width: 94%;
+	margin: 0 auto;
+	margin-top: 30px;
+	height: 300px;
+	margin-bottom: 30px;
+}
+
+.promo-banner__background {
+	display: block;
+	height: 100%;
+	background: url('../img/promo-2-mobile.jpg') no-repeat;
+}
+
+.promo-banner--two .promo-banner__link {
+	display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+.promo-banner--two .promo-banner__title {
+	position: absolute;
+	top: 10px;
+	font-size: 20px;
+	color: #ffffff;
+}
+
+.promo-banner--two .promo-banner__title a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.promo-banner--two .promo-banner__title a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 500px) {
+	.promo-banner__background {
+		background: url('../img/promo-2.jpg') no-repeat;
+		background-size: 100% 290px;
+	}
+
+	.promo-banner--two .promo-banner__title {
+		display: none;
+	}
+
+	.promo-banner--two .promo-banner__link {
+		padding: 12px;
+    bottom: 30px;
+  	right: 3%;
+	}
+}
+
+@media (min-width: 650px) {
+	.promo-banner--two {
+		max-width: 540px;
+		height: 280px;
+	}
+
+	.promo-banner__background {
+		background-size: contain;
+	}
+
+	.promo-banner__link {
+		right: 30px;
+    bottom: 20px;
+	}
+
+	.promo-banner--two .promo-banner__link {
+		bottom: 18px;
+	}
+}
