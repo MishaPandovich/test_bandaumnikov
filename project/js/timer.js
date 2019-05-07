@@ -2,7 +2,7 @@
 var hour = document.querySelector('.timer__item--hour'),
 		min  = document.querySelector('.timer__item--minutes'),
 		sec  = document.querySelector('.timer__item--seconds');
-		lastDay  = 7, // укажите день окончания акции .. 7 мая
+		lastDay  = 11, // укажите день окончания акции .. 11 мая
 		lastHours = 12; // во сколько часов она дожна закончится
 
 function getRestHours() {
@@ -13,7 +13,7 @@ function getRestHours() {
 	var restDay   = lastDay - today,
 			restHours = lastHours - todayHours;
 
-	if ((restDay <= 0) && (restHours <= 0)) {
+	if ((restDay <= 0) && ((restHours <= 0) || (restHours == 1))) {
 		return 0;
 	}	else {
 		return restHours < 0 ? ((restDay * 24) + restHours) - 1 : ((restDay * 24) - restHours) - 1;
@@ -27,7 +27,7 @@ var reserveTimer = setInterval(function() {
 	var hours = now.getHours() + restHours;
 
 	var h = hours - now.getHours(),
-			m = 60 - now.getMinutes(), 
+			m = 59 - now.getMinutes(), 
 			s = 60 - now.getSeconds(); 
 
 	if ((h <= 0) && (m <= 0)) {
