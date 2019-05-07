@@ -16,7 +16,7 @@ function getRestHours() {
 	if ((restDay <= 0) && ((restHours <= 0) || (restHours == 1))) {
 		return 0;
 	}	else {
-		return restHours < 0 ? ((restDay * 24) + restHours) - 1 : ((restDay * 24) - restHours) - 1;
+		return restDay <= 0 ? ((restDay * 24) + restHours) - 1 : ((restDay * 24) - restHours) - 1;
 	}
 }
 
